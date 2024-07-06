@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731470512C39D778009BFC1C /* SwiftyNats in Frameworks */ = {isa = PBXBuildFile; productRef = 731470502C39D778009BFC1C /* SwiftyNats */; };
 		73DA7DE527BFEAC20090B3D0 /* sensors_tvApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA7DE427BFEAC20090B3D0 /* sensors_tvApp.swift */; };
 		73DA7DE727BFEAC20090B3D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA7DE627BFEAC20090B3D0 /* ContentView.swift */; };
 		73DA7DE927BFEAC30090B3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DA7DE827BFEAC30090B3D0 /* Assets.xcassets */; };
 		73DA7DEC27BFEAC30090B3D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73DA7DEB27BFEAC30090B3D0 /* Preview Assets.xcassets */; };
+		73DA7DF727BFEDD10090B3D0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 73DA7DF627BFEDD10090B3D0 /* SwiftyJSON */; };
+		73E3328527C0080C00838695 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3328427C0080C00838695 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		73DA7DE627BFEAC20090B3D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73DA7DE827BFEAC30090B3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73DA7DEB27BFEAC30090B3D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73E3328427C0080C00838695 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alerts.swift; path = sensors_tv/Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731470512C39D778009BFC1C /* SwiftyNats in Frameworks */,
+				73DA7DF727BFEDD10090B3D0 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +41,7 @@
 		73DA7DD827BFEAC20090B3D0 = {
 			isa = PBXGroup;
 			children = (
+				73E3328427C0080C00838695 /* Alerts.swift */,
 				73DA7DE327BFEAC20090B3D0 /* sensors_tv */,
 				73DA7DE227BFEAC20090B3D0 /* Products */,
 			);
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = sensors_tv;
+			packageProductDependencies = (
+				73DA7DF627BFEDD10090B3D0 /* SwiftyJSON */,
+				731470502C39D778009BFC1C /* SwiftyNats */,
+			);
 			productName = sensors_tv;
 			productReference = 73DA7DE127BFEAC20090B3D0 /* sensors_tv.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = 73DA7DD827BFEAC20090B3D0;
+			packageReferences = (
+				73DA7DF527BFEDD10090B3D0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				7314704F2C39D778009BFC1C /* XCRemoteSwiftPackageReference "SwiftyNats" */,
+			);
 			productRefGroup = 73DA7DE227BFEAC20090B3D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73DA7DE727BFEAC20090B3D0 /* ContentView.swift in Sources */,
+				73E3328527C0080C00838695 /* Alerts.swift in Sources */,
 				73DA7DE527BFEAC20090B3D0 /* sensors_tvApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +351,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7314704F2C39D778009BFC1C /* XCRemoteSwiftPackageReference "SwiftyNats" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aus-der-Technik/SwiftyNats";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		73DA7DF527BFEDD10090B3D0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		731470502C39D778009BFC1C /* SwiftyNats */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7314704F2C39D778009BFC1C /* XCRemoteSwiftPackageReference "SwiftyNats" */;
+			productName = SwiftyNats;
+		};
+		73DA7DF627BFEDD10090B3D0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73DA7DF527BFEDD10090B3D0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 73DA7DD927BFEAC20090B3D0 /* Project object */;
 }
